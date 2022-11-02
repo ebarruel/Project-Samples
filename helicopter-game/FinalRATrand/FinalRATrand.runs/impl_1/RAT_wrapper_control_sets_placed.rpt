@@ -1,0 +1,103 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Dec  3 09:40:49 2018
+| Host         : LAPTOP-RM431RK5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file RAT_wrapper_control_sets_placed.rpt
+| Design       : RAT_wrapper
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    36 |
+| Unused register locations in slices containing registers |    40 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|      4 |            1 |
+|      6 |            1 |
+|    16+ |           31 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              52 |           14 |
+| No           | No                    | Yes                    |              64 |           14 |
+| No           | Yes                   | No                     |             172 |           34 |
+| Yes          | No                    | No                     |              92 |           25 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              36 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+-----------------------------------------------+-----------------------------------+------------------+----------------+
+|   Clock Signal  |                 Enable Signal                 |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-----------------+-----------------------------------------------+-----------------------------------+------------------+----------------+
+|  CLK_IBUF_BUFG  |                                               |                                   |                1 |              2 |
+|  tmp_clkf_BUFG  |                                               | VGA/vga_out/H0                    |                1 |              2 |
+|  tmp_clkf_BUFG  |                                               | VGA/vga_out/V0                    |                1 |              2 |
+|  SG/my_clk/CLK  |                                               |                                   |                1 |              4 |
+|  s_clk_sig_BUFG |                                               | RST_IBUF                          |                3 |              6 |
+|  s_clk_sig_BUFG | CPU/my_prog_rom/E[0]                          | CPU/my_cu/out[0]                  |                3 |             16 |
+|  s_clk_sig_BUFG | CPU/my_prog_rom/r_LEDS_reg[0][0]              |                                   |                4 |             16 |
+|  s_clk_sig_BUFG | CPU/my_prog_rom/r_vga_wd_reg[0][0]            |                                   |                7 |             16 |
+|  s_clk_sig_BUFG | CPU/my_prog_rom/r_SSEG_reg[0][0]              |                                   |                2 |             16 |
+|  tmp_clkf_BUFG  |                                               | VGA/vga_out/Bout[1]_i_1_n_0       |                8 |             16 |
+|  s_clk_sig_BUFG | CPU/my_cu/E[0]                                | CPU/my_cu/out[0]                  |                5 |             20 |
+|  tmp_clkf_BUFG  |                                               | VGA/vga_out/horizontal[3]_i_1_n_0 |                4 |             20 |
+|  s_clk_sig_BUFG |                                               |                                   |                8 |             22 |
+|  tmp_clkf_BUFG  |                                               |                                   |                4 |             24 |
+|  s_clk_sig_BUFG | CPU/my_prog_rom/RF_WR                         |                                   |                2 |             32 |
+|  s_clk_sig_BUFG | CPU/my_prog_rom/r_vga_wa_reg[6]_rep__0        |                                   |               12 |             44 |
+|  s_clk_sig_BUFG |                                               | SG/my_clk/tmp_clk                 |                8 |             62 |
+|  CLK_IBUF_BUFG  |                                               | RST_IBUF                          |               14 |             64 |
+|  s_clk_sig_BUFG |                                               | VGA/vga_clk/tmp_clkf_0            |                9 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1024_1151_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_0_127_0_0_i_1_n_0     |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1152_1279_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1280_1407_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1408_1535_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1536_1663_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_128_255_0_0_i_1_n_0   |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1792_1919_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1664_1791_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_256_383_0_0_i_1_n_0   |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_512_639_0_0_i_1_n_0   |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_768_895_0_0_i_1_n_0   |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_896_1023_0_0_i_1_n_0  |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_384_511_0_0_i_1_n_0   |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_1920_2047_0_0_i_1_n_0 |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | VGA/frameBuffer/mem_reg_640_767_0_0_i_1_n_0   |                                   |                8 |             64 |
+|  s_clk_sig_BUFG | CPU/my_prog_rom/s_scr_we                      |                                   |               10 |             80 |
++-----------------+-----------------------------------------------+-----------------------------------+------------------+----------------+
+
+
