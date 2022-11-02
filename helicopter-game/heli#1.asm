@@ -9,7 +9,7 @@
 ;   4) draws a red vertical line
 ;
 ; Author: Bridget Benson 
-; Modifications: bryan mealy
+; Modifications: bryan mealy, Evangeline Barruel, Robert Middleton
 ;---------------------------------------------------------------------
 
 .CSEG
