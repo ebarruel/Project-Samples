@@ -1,0 +1,33 @@
+MOV    r6, BG_COLOR
+		 SUB r8, 0x01
+		 CALL   draw_vertical_line
+		 SUB r9, 0x01
+	
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+
+		 MOV    r6, WALL_COLOR
+		 SUB r8, 0x03
+		 CALL   draw_vertical_line
+		 SUB r9, 0x01
+
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+
+
+		 MOV    r6, WALL_COLOR
+		 CALL get_wall_height
+		 ADD r8, 0x04
+		 CALL draw_vertical_line
+
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
+		 CALL   pause
